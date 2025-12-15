@@ -25,7 +25,6 @@ userRoutes.post('/user-login', async (req: Request, res: Response, next: NextFun
 
 })
 
-
 userRoutes.post('/follow-vacation', verifyTokenMW, async (req: Request, res: Response, next: NextFunction) => {
     const {user_id, vacation_id} = req.body;
     const follow = await followVacation(user_id, vacation_id);

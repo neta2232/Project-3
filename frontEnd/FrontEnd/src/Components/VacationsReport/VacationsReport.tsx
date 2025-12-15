@@ -1,24 +1,24 @@
-import{ useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { fetchVacationFollowers } from '../../Api/ClientApi';
 import './VacationsReport.css'
 
 ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
 );
 
 const VacationsReport = () => {
@@ -53,7 +53,6 @@ const VacationsReport = () => {
     ]
   };
 
-  // 📌 פונקציה לייצור CSV
   const downloadCSV = () => {
     const header = "Destination,Followers\n";
     const rows = labels.map(l => `"${l.destination}",${l.followers}`).join("\n");
@@ -72,10 +71,8 @@ const VacationsReport = () => {
 
   return (
     <>
-    <button id='export-btn' onClick={downloadCSV}>Export to Excel</button>
-
+      <button id='export-btn' onClick={downloadCSV}>Export to Excel</button>
       <h2>Vacations Report</h2>
-
       <div className='graph'>
         <Bar className='bar' options={options} data={chartData} />
       </div>

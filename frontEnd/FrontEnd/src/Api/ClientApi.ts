@@ -8,6 +8,7 @@ export function fetchRegister(newUser: NewUser): Promise<any> {
   console.log(res);
   return res;
 }
+
 export async function fetchVacations(
   page?: number,
   followedVacations?: boolean,

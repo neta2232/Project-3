@@ -20,7 +20,6 @@ function Vacations() {
   limit
   total
 
-  // סטייט אחד לכל השגיאות
   const [errors, setErrors] = useState<{ global?: string; vacations?: { [id: number]: string } }>({});
 
   const [filter, setFilter] = useState<"all" | "active" | "future" | "mine">("all");
@@ -90,7 +89,6 @@ function Vacations() {
           )
         );
       }
-      // נקה שגיאה לחופשה זו אם הצליח
       setErrors(prev => ({
         ...prev,
         vacations: { ...prev.vacations, [vacationId]: "" }

@@ -13,7 +13,7 @@ export async function getVacationsPaged(
   userid?: number,
   futureVacations?: boolean,
   activeVacations?: boolean,
-  followedVacations?: boolean // 🆕 הפרמטר החדש ששולט בסינון "החופשות שלי"
+  followedVacations?: boolean 
 ) {
   let q = `SELECT v.* FROM vacations v`;
   let countQ = `SELECT COUNT(v.id) AS count FROM vacations v`;
@@ -143,7 +143,7 @@ export async function addVacation(vacation: Partial<VacationsModel>): Promise<an
 async function saveImage(imagefile: UploadedFile) {
   if (!imagefile) return;
 
-  const uuidString = uuid(); // שימוש נכון
+  const uuidString = uuid(); 
   const lastDot = imagefile.name.lastIndexOf(".");
   const imageName = uuidString + imagefile.name.substring(lastDot);
 
@@ -176,16 +176,7 @@ export async function updateVacation(v: Partial<VacationsModel>): Promise<any> {
     throw new Error("image_fileName is required");
   }
 
-  const q = `
-    UPDATE vacations
-    SET destination=$1,
-        description=$2,
-        start_date=$3,
-        end_date=$4,
-        price=$5,
-        image_filename=$6
-    WHERE id=$7
-  `;
+  const q = `UPDATE vacations SET destination=$1, description=$2, start_date=$3, end_date=$4, price=$5, image_filename=$6 WHERE id=$7`;
 
   const params = [
     v.destination,
@@ -197,7 +188,6 @@ export async function updateVacation(v: Partial<VacationsModel>): Promise<any> {
     v.id
   ];
 
-  console.log("Update params:", params);
   await runQuery(q, params);
   return newimagefilename;
 }

@@ -23,7 +23,6 @@ export class VacationsModel {
         followers: number,
         isuserFollow: boolean
 
-
     ) {
         this.id = id;
         this.destination = destination;

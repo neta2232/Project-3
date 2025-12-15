@@ -9,7 +9,6 @@ export function errorHandler(error: any, request: Request, response: Response, n
         return;
     }
 
-    const msg = `Unknown error. message: ${error.message}.\nTB:\n${error.stack}`
-
+    console.error("Unexpected error:", error);
     response.status(StatusCode.ServerError).send("Internal Server Error" + error.message + error.stack)
 }

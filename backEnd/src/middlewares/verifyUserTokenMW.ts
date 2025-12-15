@@ -14,7 +14,7 @@ export function verifyTokenMW(req: Request, res: Response, next: NextFunction) {
     if (!user?.id) {
       return res.status(401).send("Invalid token payload: missing id");
     }
-
+    
     res.locals.user = user;
     next();
   } catch {

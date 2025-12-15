@@ -14,7 +14,6 @@ function formatDateForInput(dateString: string) {
     return d.toISOString().split("T")[0]; 
 }
 
-
 function EditVacation({ vacation, onClose }: EditVacationProps) {
     const [vacationData, setVacationData] = useState<Vacationpropstoedit>({
         id: vacation.id,
@@ -67,9 +66,6 @@ function EditVacation({ vacation, onClose }: EditVacationProps) {
         } else {
             formData.append("image_fileName", vacationData.image_fileName);
         }
-
-
-
 
         try {
             console.log(formData);

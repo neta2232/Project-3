@@ -28,7 +28,7 @@ textarea{
     border-radius: 6px;
 }
 input[type="file"] {
-  display: none; /* מסתיר את ה־input המקורי */
+  display: none; 
 }
 input[type="number"] {
   margin-bottom: 20px;

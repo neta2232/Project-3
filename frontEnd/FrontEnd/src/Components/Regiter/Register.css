@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 15px;
   width: 380px;
-  margin: 0 auto; /* מרכז את הטופס */
+  margin: 0 auto;
   padding: 25px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -12,7 +12,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* כותרת */
 #register-title {
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -23,14 +22,12 @@
 
 }
 
-/* תוויות */
 #register-container label {
   font-size: 14px;
   font-weight: bold;
   color: #444;
 }
 
-/* שדות קלט */
 #register-container input {
   background-color: white !important;
   padding: 10px;
@@ -45,7 +42,6 @@
   outline: none;
 }
 
-/* כפתור */
 #register-container button {
     background-color: #247272;
   display: flex;

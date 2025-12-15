@@ -7,6 +7,7 @@ import { verifyTokenAdminMW } from '../middlewares/verifyAdminTokenMW';
 import { StatusCode } from '../models/StatusCode';
 
 export const vacationsRoutes = express.Router();
+
 vacationsRoutes.get('/vacations-paged', verifyTokenMW, async (req, res, next) => {
   const user = res.locals.user;
   if (!user?.id) {
@@ -32,31 +33,31 @@ vacationsRoutes.get('/vacations-paged', verifyTokenMW, async (req, res, next) =>
 });
 
 vacationsRoutes.get('/user-vacations', verifyTokenMW, async (req: Request, res: Response, next: NextFunction) => {
-    const page = Number(req.query.page);
-    const limit = Number(req.query.limit);
-    const vacations = await getVacationsPaged(page || 1, limit || 10) ;    
-    res.status(StatusCode.Ok).json(vacations);
+  const page = Number(req.query.page);
+  const limit = Number(req.query.limit);
+  const vacations = await getVacationsPaged(page || 1, limit || 10);
+  res.status(StatusCode.Ok).json(vacations);
 });
 
-vacationsRoutes.post('/add-vacation', verifyTokenAdminMW, async(req: Request, res: Response, next: NextFunction) =>{
-        const uploadedFile = req.files?.image_fileName as UploadedFile; 
-        
-        const newVacation = new VacationsModel(
-            undefined,
-            req.body.destination,
-            req.body.description,
-            new Date(req.body.start_date),
-            new Date(req.body.end_date),
-            +req.body.price, 
-            uploadedFile,
-            req.body.followers || 0,
-            req.body.is_following  || false
-        );
+vacationsRoutes.post('/add-vacation', verifyTokenAdminMW, async (req: Request, res: Response, next: NextFunction) => {
+  const uploadedFile = req.files?.image_fileName as UploadedFile;
 
-        newVacation.validate(); 
+  const newVacation = new VacationsModel(
+    undefined,
+    req.body.destination,
+    req.body.description,
+    new Date(req.body.start_date),
+    new Date(req.body.end_date),
+    +req.body.price,
+    uploadedFile,
+    req.body.followers || 0,
+    req.body.is_following || false
+  );
 
-        const newId = await addVacation(newVacation);
-        res.status(StatusCode.Created).send(newId);
+  newVacation.validate();
+
+  const newId = await addVacation(newVacation);
+  res.status(StatusCode.Created).send(newId);
 })
 
 vacationsRoutes.patch('/update-vacation', verifyTokenAdminMW, async (req: Request, res: Response, next: NextFunction) => {
@@ -70,9 +71,9 @@ vacationsRoutes.patch('/update-vacation', verifyTokenAdminMW, async (req: Reques
       req.body.start_date,
       req.body.end_date,
       req.body.price,
-      imageFile || req.body.image_fileName, 
+      imageFile || req.body.image_fileName,
       req.body.followers,
-      req.body.isuserFollow ? req.body.isuserFollow:  undefined
+      req.body.isuserFollow ? req.body.isuserFollow : undefined
     );
 
     VacationUpdated.validate();
@@ -83,13 +84,13 @@ vacationsRoutes.patch('/update-vacation', verifyTokenAdminMW, async (req: Reques
   }
 });
 
-vacationsRoutes.delete('/delete-vacation', verifyTokenAdminMW, async(req: Request, res: Response, next: NextFunction) =>{
-    const vacationId = req.body.vacationId;
-    const changes = await deleteVacation(vacationId);
-    res.status(StatusCode.Ok).send(changes);
+vacationsRoutes.delete('/delete-vacation', verifyTokenAdminMW, async (req: Request, res: Response, next: NextFunction) => {
+  const vacationId = req.body.vacationId;
+  const changes = await deleteVacation(vacationId);
+  res.status(StatusCode.Ok).send(changes);
 })
 
-vacationsRoutes.get('/vacations-followers', verifyTokenAdminMW ,async(req: Request, res: Response, next: NextFunction) =>{
-    const vacation_followers = await getVacationFollowers()
-    res.status(StatusCode.Ok).send(vacation_followers)
+vacationsRoutes.get('/vacations-followers', verifyTokenAdminMW, async (req: Request, res: Response, next: NextFunction) => {
+  const vacation_followers = await getVacationFollowers()
+  res.status(StatusCode.Ok).send(vacation_followers)
 })

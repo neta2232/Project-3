@@ -24,12 +24,12 @@ export type VacationData = {
   image_fileName: string | File;
 }
 
-export type  VacationProps ={
-    destination: string;
-    description: string;
-    start_date: string;
-    end_date: string;
-    price: number;
+export type VacationProps = {
+  destination: string;
+  description: string;
+  start_date: string;
+  end_date: string;
+  price: number;
 }
 export type Vacationpropstoedit = {
   id: number;
@@ -40,7 +40,7 @@ export type Vacationpropstoedit = {
   price: number;
   image_fileName: string;
   followers: number;
-  
+
 }
 
 export type Login = {

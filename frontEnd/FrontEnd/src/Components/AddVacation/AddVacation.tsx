@@ -18,7 +18,6 @@ function AddVacation() {
     const [success, setSuccess] = useState<boolean>(false);
     const [imageFile, setImageFile] = useState<File | null>(null);
 
-    // 1. פונקציה כללית לטיפול בשינויים בשדות טקסט/תאריך/מספר
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const { name, value } = e.target;
 
@@ -28,14 +27,12 @@ function AddVacation() {
         }));
     }
 
-    // 2. פונקציה ספציפית לטיפול בקובץ התמונה
     function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
         if (e.target.files && e.target.files.length > 0) {
             setImageFile(e.target.files[0]);
         }
     }
 
-    // 3. שליחת טופס באמצעות FormData
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
 
@@ -46,7 +43,6 @@ function AddVacation() {
 
         const formData = new FormData();
 
-        // 💡 הוספת שדות הטופס
         formData.append("destination", vacationData.destination);
         formData.append("description", vacationData.description);
         formData.append("start_date", vacationData.start_date);

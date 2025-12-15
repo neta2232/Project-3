@@ -1,19 +1,18 @@
 .n-register-button {
   background-color:rgb(187, 232, 241);
- /* ירוק */
-  color: black;                /* טקסט לבן */
-  border: none;                /* בלי מסגרת */
-  padding: 8px 16px;           /* ריווח פנימי */
-  border-radius: 6px;          /* פינות מעוגלות */
-  cursor: pointer;             /* ידית עכבר */
-  font-weight: bold;           /* טקסט מודגש */
+  color: black;              
+  border: none;               
+  padding: 8px 16px;          
+  border-radius: 6px;          
+  cursor: pointer;            
+  font-weight: bold;          
   text-decoration-line: underline;
   margin-top: -20px;
   font-size: 14px;
 }
 
 .n-register-button:hover {
-    color: #247272; /* ירוק כהה יותר בהובר */
+    color: #247272; 
 }
 .n-register{
   text-align: center;
@@ -26,7 +25,7 @@
   background-color: rgb(187, 232, 241);
   gap: 15px;
   width: 380px;
-  margin: 0 auto; /* מרכז את הטופס */
+  margin: 0 auto; 
   padding: 25px;
   border: 1px solid #ddd;
   border-radius: 8px;

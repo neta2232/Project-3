@@ -14,7 +14,7 @@ export async function createUser(user: Partial<UserModel>): Promise<string> {
     VALUES ($1, $2, $3, $4, $5)
     RETURNING id;
   `;
-  const values = [user.first_name, user.last_name, user.email, hash, user.isadmin ?? false];
+  const values = [user.first_name, user.last_name, user.email, hash, user.isadmin ? user.isadmin: false];
   const res = await runQuery(q, values);
 
   const newId = res[0]?.id;
@@ -34,8 +34,6 @@ export async function createUser(user: Partial<UserModel>): Promise<string> {
 export async function login(email: string, password: string): Promise<any> {
   const q = `SELECT * FROM new_user WHERE email=$1`;
   const res = await runQuery(q, [email]) as UserModel[];
-  console.log(res);
-
   if (res.length !== 1) {
     throw new UnauthorizedError("no results from query");
   }
