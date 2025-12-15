@@ -1,0 +1,110 @@
+.n-register-button {
+  background-color:rgb(187, 232, 241);
+ /* ירוק */
+  color: black;                /* טקסט לבן */
+  border: none;                /* בלי מסגרת */
+  padding: 8px 16px;           /* ריווח פנימי */
+  border-radius: 6px;          /* פינות מעוגלות */
+  cursor: pointer;             /* ידית עכבר */
+  font-weight: bold;           /* טקסט מודגש */
+  text-decoration-line: underline;
+  margin-top: -20px;
+  font-size: 14px;
+}
+
+.n-register-button:hover {
+    color: #247272; /* ירוק כהה יותר בהובר */
+}
+.n-register{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(187, 232, 241);
+  gap: 15px;
+  width: 380px;
+  margin: 0 auto; /* מרכז את הטופס */
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-container label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+.login-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  background-color: white;
+  width: 97%;
+}
+
+.login-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-container button {
+  background-color: #247272;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  width:35%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-container button:hover {
+  background-color: #3f9a99;
+}
+.welcome-card {
+  width: 100%;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-card h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.welcome-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.login-title{
+  font-size: 56px;
+  font-weight: bolder;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+#p-id{
+  background-color:rgb(187, 232, 241);
+}
+
+
+

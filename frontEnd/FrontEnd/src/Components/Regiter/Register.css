@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+#register-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 380px;
+  margin: 0 auto; /* מרכז את הטופס */
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgb(187, 232, 241);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* כותרת */
+#register-title {
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 50px;
+  margin-top: 45px;
+
+}
+
+/* תוויות */
+#register-container label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* שדות קלט */
+#register-container input {
+  background-color: white !important;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+#register-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* כפתור */
+#register-container button {
+    background-color: #247272;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight:700;
+  width:35%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#register-container input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  background-color: rgb(167, 225, 222);
+  width: 325px;
+}
+
+#register-container button:hover {
+  background-color: #3f9a99;
+}
+
+#register-container p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}

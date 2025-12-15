@@ -1,0 +1,32 @@
+.graph{
+    width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 50px;
+}
+h2{
+        font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+    margin-top: -18px;
+    color:#026dc5;
+    text-align: center;
+}
+#export-btn{
+  background-color: rgba(1, 120, 120, 0.6);
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bolder;
+  padding: 7px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  width:9%;
+  cursor: pointer;
+  margin-left: 176px;
+}
+#export-btn:hover{
+      background-color: rgba(3, 172, 172, 0.6);
+
+}

@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+#arrowsdiv {
+  display: flex;              
+  align-items: center;        /* מיישר אותם אנכית */
+  justify-content: center;    /* ממרכז את כל התוכן */
+  gap: 20px;                  /* רווחים בין האלמנטים */
+  margin-top: 25px;           /* רווח מעל החלק */
+  background-color: #c3f0f3;  /* רקע בהיר תואם לכרטיסים */
+  border: 1px solid #ddd;     /* מסגרת עדינה */
+  border-radius: 8px;         /* פינות מעוגלות */
+  padding: 12px 20px;         /* ריווח פנימי */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* הצללה עדינה */
+}
+
+#arrowsdiv .page-buttons {
+  background-color: #43999c;  /* ירקרק-כחול תואם לפילטרים */
+  color: white;               /* טקסט לבן */
+  border: none;
+  border-radius: 17px;
+  padding: 5px 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#arrowsdiv .page-buttons:hover:not(:disabled) {
+  background-color: #428b8d;  /* כהה יותר בריחוף */
+  transform: translateY(-2px); /* אפקט קל של הרמה */
+}
+
+#arrowsdiv .page-buttons:disabled {
+  background-color: #43999c;  
+  opacity: 65%;   /* אפור כשהכפתור לא פעיל */
+  cursor: not-allowed;
+}
+
+#arrowsdiv #pages {
+  font-weight: bold;
+  font-size: 17px;
+  color: #333;
+  margin-top: 10px;
+}
+
+
+.filters {
+  display: flex;
+  flex-wrap: wrap; /* אם אין מקום, ירדו שורה */
+  justify-content: center;
+  gap: 12px; /* רווח אחיד בין פילטרים */
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.filters label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  gap:-100px !important;
+  font-weight: bold;
+  color: #032C93;
+  padding: 6px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: initial; 
+}
+
+.filters label:hover {
+  background-color: #d0e8ff;
+}
+
+.filters input[type="radio"] {
+  margin-right: 6px;
+  accent-color: hsl(151, 100%, 31%);
+}
+.filter-input{
+  width:20px;
+ 
+}
+
+
+.vacations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  background-color: #e7feff;
+  border-radius: 8px;
+}
+
+.vacations .card {
+  width: 320px;
+  height: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.vacations .card:hover {
+  transform: translateY(-5px);
+}
+
+.vacations .card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.vacations .card-content {
+  padding: 10px;
+  flex: 1;
+}
+
+.vacations .card-content h3 {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.vacations .card-content p {
+  margin: 4px 0;
+  font-size: 17px;
+  color: #555;
+}
+
+.vacations .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-top: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.edit-btn,
+.follow-btn {
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: hsl(151, 100%, 31%); 
+  color: white;
+  width: 27%;
+  position: absolute;
+  font-weight: bolder;
+    border-right: 2px solid white;
+  border-bottom: 2px solid white;
+    border-radius:0px 0px 8px 0px;
+}
+.delete-btn {
+  background-color: #c9302c;
+  position: absolute;
+  margin-left: 340px;
+  right:-1px;
+  border: black;
+  border-radius: 0px 0px 0px 8px;
+  height: 30px;
+  width: 35px;
+  font-size: 20px;
+  background-image: url("https://img.icons8.com/ios-glyphs/30/ffffff/delete-sign.png");
+  background-size:18px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.delete-btn:hover{
+    background-color: #a62623;
+
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.follow-btn {
+  background-color: hsl(151, 100%, 31%); 
+  color: white;
+  width: 27%;
+  position: absolute;
+  font-weight: bolder;
+    border-right: 2px solid white;
+  border-bottom: 2px solid white;
+    border-radius:0px 0px 8px 0px;
+}
+
+.follow-btn:hover {
+  background-color: hsl(151, 100%, 40%);
+  
+}
+.unfollow-btn {
+  background-color: hsl(150, 1%, 27%);
+  color: white;
+  width: 27%;
+  position: absolute;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+    border-radius:0px 0px 8px 0px;
+  padding: 6px 12px;
+  font-size: 15px;
+  font-weight: bolder;
+
+}
+
+.unfollow-btn:hover {
+  background-color:  hsl(150, 1%, 36%);
+  
+}
+h1{
+  text-align: center;
+   font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bolder;
+  color: rgb(19, 54, 144);   
+  font-size: 60px;
+  margin-bottom: 35px;
+  margin-top: 60px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.modal-overlay {
+  position: fixed; 
+  margin-left: auto;
+  margin-right: auto;
+top: 50%; /* Moves the top edge to the vertical center */
+   left: 40%;
+   right: 50%;
+  background-color: rgb(152, 216, 239);
+  padding: 25px;
+  border-radius: 10px;
+  min-width: 300px;
+  min-height: 120px;
+  text-align: center;
+  z-index: 2001; /* מעל ההחשכה */
+  text-align: center;
+
+}
+
+
+.modal-text {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.confirm-btn {
+  background: #d9534f;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background: #c9302c;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* שקיפות */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* מעל הכל */
+}
+
+/* תוכן המודאל */
+.modal-content {
+  background: rgb(187, 232, 241);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 3px solid black;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* טופס בתוך המודאל */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.modal-content input[type="date"] {
+  width: fit-content;
+  display: flex;
+  text-align: center;
+}
+.modal-content input[type="number"] {
+  width: fit-content;
+  display: flex;
+  text-align: center;
+}
+
+/* כפתורים */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+  font-size: 14px;
+}
+
+.modal-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-buttons button[type="submit"] {
+    background-color: hsl(151, 100%, 31%); 
+  color: white;
+    font-weight: 600;
+
+}
+.modal-buttons button[type="submit"]:hover {
+    background-color: hsl(151, 98%, 23%); 
+
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #a62623;
+  color: white;
+  font-weight: 600;
+}
+.modal-buttons button[type="button"]:hover{
+  background-color: #8b1f1d;
+}
+.card-content{
+  padding: 10px;
+}
+.card-content p {
+  font-size: 20px;
+}
+.my-progress {
+  height: 35px;   
+  width: 500px;     
+  font-size: 1.2rem;     
+  border-radius: 8px;   
+  overflow: hidden;      
+}
+
+.my-progress .progress-bar {
+  display: flex;
+  background-color: #428b8d !important;
+  width: 100%;
+  align-items: center;  
+  justify-content: center; 
+  font-weight: bold;
+}
+#sure{
+  font-weight: bolder;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.vacation-message {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #c2dcf2; /* רקע עדין */
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

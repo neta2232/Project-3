@@ -1,0 +1,27 @@
+.error-message {
+  color: #d32f2f;              /* אדום ברור */
+  background-color: #ffe6e6;   /* רקע בהיר */
+  border: 1px solid #f5c2c2;   /* מסגרת עדינה */
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* הודעת שגיאה ספציפית ליד כפתור חופשה */
+.card .error-message {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  background: transparent;     /* בלי רקע */
+  border: none;
+  color: #d32f2f;
+  font-style: italic;
+}
+
+/* אנימציה עדינה */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.modal-inner{
+    background-color: rgb(187, 232, 241);
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+}
+.edit-title{
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color:  rgb(19, 54, 144);
+    margin-bottom: 2px;
+    margin-top: 1px;
+}
+input{
+    background-color: white;
+    border-radius: 6px;
+    width: 350px;
+    padding-left: 7px;
+}
+h2{
+  font-weight: bolder;
+}
+
+textarea{
+        background-color: white;
+    border-radius: 6px;
+}
+input[type="file"] {
+  display: none; /* מסתיר את ה־input המקורי */
+}
+input[type="number"] {
+  margin-bottom: 20px;
+}
+
+.file-upload {
+  background-color: #c3f0f3; 
+  color: rgb(3, 44, 147);
+  font-weight: bolder;
+  padding: 5px 9px;
+  border: solid 2px rgb(3, 44, 147);
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  width:190px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 11px;
+    margin-bottom: 20px;
+
+}
+.file-upload:hover{
+    background-color:#a9d9dc;
+
+}
+
+.custom-file-upload:hover {
+  background-color: #104b53;
+}
+.vimg{
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 7px;
+}
+#imglabel{
+  margin-left: 67px;
+}
+label{
+  color: rgb(3, 44, 147);
+}
+
